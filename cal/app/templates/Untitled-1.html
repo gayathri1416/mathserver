@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Power Calculation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url("{% static 'backgroung.jpg' %}"); /* Full-page background */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height:100vh;
+    }
+
+    .title {
+      text-align: center;
+      margin-top: 1cm;
+      color: bisque;
+    }
+
+    .file {
+      background-color: rgba(255, 255, 255, 0.3); /* Light transparent box */
+      color: black;
+      padding: 30px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 600px;
+      margin: 3cm auto;
+      border: 3px solid rgb(199, 6, 48);
+    }
+  </style>
+</head>
+<body>
+  <h1 class="title">POWER CALCULATION OF A LAMP FILAMENT</h1>
+  <form method="POST">
+    {% csrf_token %}
+    {% load static %}
+    <div class="file">
+      <label for="intensity">Enter the intensity:</label>
+      <input type="number" id="intensity" name="intensity" value="{{intensity}}" />
+
+      <label for="resis">Enter the resistance:</label>
+      <input type="number" id="resis" name="resistance" value="{{resistance}}" />
+
+      <input type="submit" value="CALCULATE" />
+
+      {% if message %}
+        <h4>{{message}}</h4>
+      {% endif %}
+      <h3>Power is : {{power}}</h3>
+    </div>
+  </form>
+</body>
+</html>
