@@ -1,5 +1,5 @@
 # Ex.05 Design a Website for Server Side Processing
-# Date:
+# Date:02.10.2025
 # AIM:
 To design a website to calculate the power of a lamp filament in an incandescent bulb in the server side.
 
@@ -64,7 +64,6 @@ def calculation(request):
 
 cal.html
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -80,14 +79,16 @@ body{
         text-align: center;
         margin-top: 1cm;
         block-size: auto;
-        background-color:lightgoldenrodyellow;
-        color: rgba(160, 20, 20, 0.818);
+        background:linear-gradient(rgb(255, 153, 0));
+        color:white;
+        text-shadow: 2px 2px 4px black ;
    }
    .file{
-  border: 3px dotted rgba(255, 196, 0, 0.871);   
-  padding:20px;                 
+  border: 8px solid rgb(189, 186, 186);  
+  box-shadow: 0 0 15px whitesmoke;
+  padding:23px;                 
   margin: 13cm;         
-  border-radius: 10px;    
+  border-radius: 10px;  
   margin-top:1cm;   
   color: white;
   width: fit-content;
@@ -99,18 +100,24 @@ body{
   margin-bottom: 30px;
 }
 label,input{
+    display:inline-block;
     font-size:larger;
+    text-align: left;
 }
 .button{
     display: block;
-    margin-left: 0.3cm;
+    margin-left: auto;
+    margin-right: auto;
     background:maroon;
-    border: 1px dashed yellow;
     color: aliceblue;
     font-family:fantasy;
+    border: 4px solid rgb(189, 186, 186);  
+    box-shadow: 0 0 8px whitesmoke;
+    
 }
 .result{
-    margin-left: 2%;
+    text-shadow: 0 0 10px gold;
+    text-align: center;
 }
 </style>
 <body>
@@ -129,7 +136,7 @@ label,input{
         {% if message %}
           <h4>{{message}}</h4>
         {% endif %}
-        <h3>Power is : {{power}} </h3>  
+        <h2>Power is : {{power}} </h2>  
      </div>     
     </div>
     </form>
@@ -138,7 +145,7 @@ label,input{
 ```
 
 # HOMEPAGE:
-![alt text](<Screenshot 2025-10-02 170312.png>)
-![alt text](<Screenshot 2025-10-02 170248.png>)
+![alt text](<Screenshot 2025-10-02 185018.png>)
+![alt text](<Screenshot 2025-10-02 185035.png>)
 # RESULT:
 The program for performing server side processing is completed successfully.
